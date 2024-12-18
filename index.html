@@ -280,9 +280,9 @@
         <script>
             const answers = {
                 1: ["en lille trold"],
-                2: ["Dublin"],
+                2: ["dublin"],
                 3: ["chokolade"],
-                4: ["2139"],
+
             };
 
             const numbers = {
@@ -317,6 +317,9 @@
                 );
                 const userAnswer = input.value.toLowerCase().trim();
 
+                console.log(userAnswer)
+                console.log(answers)
+
                 if (answers[questionNumber].includes(userAnswer)) {
                     feedback.textContent =
                         questionNumber < 4
@@ -330,6 +333,7 @@
                     }
                 } else {
                     feedback.textContent = "Forkert svar. Prøv igen!";
+                    console.log(answers.questionNumber)
                     feedback.className = "feedback incorrect";
                     feedback.style.display = "block";
                     if (nextButton) nextButton.style.display = "none";
